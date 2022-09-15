@@ -21,5 +21,10 @@ while (true)
     l1.Sort();
 
 
+    int count = 0;
 
+    foreach(var item in l1)
+    {
+        Console.WriteLine(item);
+    }
 }

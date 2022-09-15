@@ -8,28 +8,34 @@ abc = Console.ReadLine();
 
 string[] str = abc.Split('-');
 
-for (int i = 0; i < abc.Length; i++)
+for(int i = 0; i < str.Length-1; i++)
+{
+    for(int j = i+1; j < str.Length; j++)
+    {
+        if (str[i] == str[j])
+        {
+            Console.WriteLine("duplicate");
+            break;
+        }
+       
+    }
+   
+    
+    
+}
+int dif = Convert.ToInt32(str[1]) - Convert.ToInt32(str[0]);
+for (int i = 0; i < str.Length-1; i++)
 {
 
-    int diff = Convert.ToInt32(str[i]) - Convert.ToInt32(str[i + 1]);
-
+    if(Convert.ToInt32(str[i+1]) - Convert.ToInt32(str[i]) != dif)
+    {
+        Console.WriteLine("Not consecutive");
+        return;
+    }
 
 }
+Console.WriteLine("consecutive");
 
-//string[] str = abc.Split('-');
-
-//foreach(var item in str)
-//{
-//    Console.WriteLine(item);
-//}
-
-//List<int> l1 = new List<int>();
-//for(int i = 0; i < str.Length-1; i++)
-//{
-//    int a= Convert.ToInt32(str[i]) - Convert.ToInt32(str[i + 1]);
-
-//    l1.Add(a);
-//}
 
 
 
