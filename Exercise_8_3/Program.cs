@@ -1,13 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-var Input = Convert.ToDateTime(Console.ReadLine());
+string time = Console.ReadLine();
 
-if(Input.Hour >= 00 && Input.Hour <= 23  && Input.Minute>= 00 && Input.Minute<=59)
+string [] abc = time.Split(':');
+
+if (Convert.ToInt32(abc[0]) >=00 && Convert.ToInt32(abc[0]) <= 23 && Convert.ToInt32(abc[1]) >= 00 && Convert.ToInt32(abc[1]) <= 59)
 {
     Console.WriteLine("ok");
 }
 else
-{
     Console.WriteLine("invalid time");
-}
+
