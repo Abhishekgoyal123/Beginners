@@ -5,17 +5,20 @@ string str = Console.ReadLine();
 
 char[] arr = new char[str.Length];
 
-for(int i = 0; i < str.Length-1; i++)
+for(int i = 0; i < str.Length; i++)
 {
     arr[i] = str[i];
 }
 
-char[] arr1 = new char[str.Length];
 
-for(int j = 0; j < str.Length-1; j++)
+
+Array.Reverse(arr);
+
+string result = string.Empty;
+
+for(int i = 0; i < arr.Length; i++)
 {
-    arr1[j] = arr[(str.Length) - j];
+    result = result + arr[i];
 }
 
-string str1 = new string(arr1);
-Console.WriteLine(str1);
+Console.WriteLine(result);
